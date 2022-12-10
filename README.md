@@ -2,6 +2,13 @@
 
 Trabajo final de Programación I
 
+- [Informacion](#informacion)
+- [Recursos](#recursos)
+  - [Mapa](#ejemplo-mapa)
+  - [Ficheros](#abrir-ficheros-de-texto)
+
+# Informacion
+
 Desarrollar un programa para que un jugador pueda buscar la salida para un robot
 de un laberinto mediante el teclado y el terminal.
 Para ello tu programa debe:
@@ -39,3 +46,36 @@ O) antes de consumir completamente su batería.
 tendrá 0 puntos.
 ○ Si se encuentra la salida antes de consumir la batería el jugador habrá
 ganado y su puntuación será el % de batería restante
+
+# Recursos
+
+## Ejemplo mapa
+
+<p align="center">
+  <img src="mapa.png" />
+</p>
+
+## Abrir ficheros de texto
+Con fstream
+```c++
+#include <iostream>
+#include <fstream>
+using namespace std;
+ 
+int main () {
+
+ 
+ ifstream ficheroEntrada;
+ string frase;
+ 
+ ficheroEntrada.open ("ficheroTexto.txt");
+ getline(ficheroEntrada, frase);
+ ficheroEntrada.close();
+
+ 
+ cout << "Frase leida: " << frase << endl;
+ 
+ return 0;
+
+}
+```
